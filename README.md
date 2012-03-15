@@ -1,5 +1,6 @@
-# Padsearch
+# Padsearch - Etherpad Search
 A simple script to expose all of the pads stored on a given Etherpad server. Pads are searchable by name.
+Now with support for Etherpad Lite.
 
 ## Screenshots
 ![Screenshot 1](http://f.cl.ly/items/3v3l253f1Q3O2N3E2O2W/Screen%20Shot%202011-09-15%20at%203.51.51%20PM.png)
