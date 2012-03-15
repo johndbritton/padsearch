@@ -11,12 +11,20 @@
   $database_password = '';
   // PUBLIC ETHERPAD URL
   $etherpad_baseurl = 'http://example.com/';
+  // ETHERPAD LITE
+  $etherpad_lite = false;
   // END CONFIGURATION OPTIONS
 
   $db = mysql_connect($database_host, $database_user, $database_password);
   mysql_select_db($database_name);
 
-  $result = mysql_query("SELECT DISTINCT `ID` FROM `PAD_META`;");
+  $result = null;
+
+  if($etherpad_lite) {
+    $result = mysql_query("select distinct SUBSTRING(`key` FROM 5) as ID from store where `key` like 'pad:%' and `key` not like 'pad:%:%';");
+  else {
+    $result = mysql_query("SELECT DISTINCT `ID` FROM `PAD_META`;");
+  }
 
   while($row = mysql_fetch_array($result)) {
     $pads[] = $row['ID'];
