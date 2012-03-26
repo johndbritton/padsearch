@@ -22,7 +22,7 @@
 
   if($etherpad_lite) {
     $result = mysql_query("select distinct SUBSTRING(`key` FROM 5) as ID from store where `key` like 'pad:%' and `key` not like 'pad:%:%';");
-  else {
+  } else {
     $result = mysql_query("SELECT DISTINCT `ID` FROM `PAD_META`;");
   }
 
