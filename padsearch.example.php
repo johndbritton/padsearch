@@ -44,8 +44,8 @@
    ul{margin: 0; padding: 0;}
    li{font-size: 2em; list-style-type: none; margin: 20px 0; font-family: 'Actor', sans-serif;}
    a{text-decoration: none; color: #000;}
-   a:hover{background-color: yellow;}
-   a:hover:after{content: ' \00bb';}
+   a:hover {background-color: yellow;}
+   a:hover:after {content: ' \00bb';}
   </style>
 </head>
 <body>
@@ -56,7 +56,11 @@
   <ul>
     <?php foreach($pads as $pad) { ?>
       <li class="pad">
-        <a target="_blank" href="<?php echo $etherpad_baseurl; ?><?php echo $pad; ?>"><?php echo $pad; ?></$
+        <a target="_blank" href="<?php 
+	 echo $etherpad_baseurl;
+  	 if($etherpad_lite) { echo "p/"; } 
+  	 echo $pad; 
+	?>"><?php echo $pad; ?></a>
       </li>
     <?php } ?>
   <ul>
