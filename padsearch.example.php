@@ -1,5 +1,8 @@
 <?php
   // Notes
+  // Fill out the database configuration section and the etherpad lite option
+  // to reflect your local setup. Rename this file as necessary to match what
+  // your webserver is expecting (padsearch.php or index.php, probably). 
   // jQuery is coming from the Google CDN, jQuery QuickSearch is coming from Github... YMMV
   // MIT License
   // Connect to your Etherpad DB and enjoy QuickSearch goodness.
