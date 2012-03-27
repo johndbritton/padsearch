@@ -1,5 +1,8 @@
 <?php
   // Notes
+  // Fill out the database configuration section and the etherpad lite option
+  // to reflect your local setup. Rename this file as necessary to match what
+  // your webserver is expecting (padsearch.php or index.php, probably). 
   // jQuery is coming from the Google CDN, jQuery QuickSearch is coming from Github... YMMV
   // MIT License
   // Connect to your Etherpad DB and enjoy QuickSearch goodness.
@@ -22,7 +25,7 @@
 
   if($etherpad_lite) {
     $result = mysql_query("select distinct SUBSTRING(`key` FROM 5) as ID from store where `key` like 'pad:%' and `key` not like 'pad:%:%';");
-  else {
+  } else {
     $result = mysql_query("SELECT DISTINCT `ID` FROM `PAD_META`;");
   }
 
@@ -41,8 +44,8 @@
    ul{margin: 0; padding: 0;}
    li{font-size: 2em; list-style-type: none; margin: 20px 0; font-family: 'Actor', sans-serif;}
    a{text-decoration: none; color: #000;}
-   a:hover{background-color: yellow;}
-   a:hover:after{content: ' \00bb';}
+   a:hover {background-color: yellow;}
+   a:hover:after {content: ' \00bb';}
   </style>
 </head>
 <body>
@@ -53,7 +56,11 @@
   <ul>
     <?php foreach($pads as $pad) { ?>
       <li class="pad">
-        <a target="_blank" href="<?php echo $etherpad_baseurl; ?><?php echo $pad; ?>"><?php echo $pad; ?></$
+        <a target="_blank" href="<?php 
+	 echo $etherpad_baseurl;
+  	 if($etherpad_lite) { echo "p/"; } 
+  	 echo $pad; 
+	?>"><?php echo $pad; ?></a>
       </li>
     <?php } ?>
   <ul>
