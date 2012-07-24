@@ -64,8 +64,8 @@
       </li>
     <?php } ?>
   </ul>
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></s$
-  <script type="text/javascript" src="https://raw.github.com/riklomas/quicksearch/master/jquery.quicksearch$
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+  <script type="text/javascript" src="https://raw.github.com/riklomas/quicksearch/f984f7f92ed8f24ef6d8aec0d47724eaf6f246ce/jquery.quicksearch.js"></script>
   <script type="text/javascript">
     $('input#search').quicksearch('li');
   </script>
