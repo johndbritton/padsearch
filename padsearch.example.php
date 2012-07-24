@@ -63,7 +63,7 @@
 	?>"><?php echo $pad; ?></a>
       </li>
     <?php } ?>
-  <ul>
+  </ul>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></s$
   <script type="text/javascript" src="https://raw.github.com/riklomas/quicksearch/master/jquery.quicksearch$
   <script type="text/javascript">
